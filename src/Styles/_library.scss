@@ -1,0 +1,75 @@
+.library {
+    position: fixed;
+    box-shadow: 2px 2px 50px rgb(221, 221, 221);
+    border-radius: 1rem;
+    top: 0;
+    left: 0;
+    width: 25.6rem;
+    height: 100%;
+    overflow: scroll;
+    background: white;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    opacity: 0;
+    h2 {
+        padding: 2rem;
+    }
+}
+
+.librarySong {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.75s ease-out;
+    img {
+        width: 44%;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+    &:hover {
+        background: rgb(240, 240, 255);
+    }
+}
+
+.song-description {
+    padding-left: 1rem;
+    h3 {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* Works on Chrome/Edge/Safari */
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(223, 223, 223, 0.7);
+    border-radius: 25px;
+    border: transparent;
+}
+
+.selected {
+    background: rgb(200, 200, 255);
+}
+
+.active-library {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .library {
+        width: 98%;
+    }
+}

@@ -1,0 +1,73 @@
+    .Player {
+        min-height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .timeControle {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        input {
+            width: 100%;
+            padding: auto;
+            -webkit-appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        p {
+            padding: 1rem;
+        }
+    }
+    
+    .playControle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        width: 40%;
+        svg {
+            cursor: pointer;
+        }
+    }
+    
+    input[type="range"]:focus {
+        outline: none;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 16px;
+        width: 16px;
+    }
+    
+    .track {
+        width: 100%;
+        height: 1rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+    
+    .animateTrack {
+        background: rgb(204, 204, 204);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(0%);
+        padding: 1rem;
+        pointer-events: none;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .timeControle {
+            width: 100%;
+        }
+        .playControle {
+            width: 80%;
+        }
+    }

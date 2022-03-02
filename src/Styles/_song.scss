@@ -1,0 +1,64 @@
+.songContainer {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        box-shadow: 3px 3px 3px rgb(209, 209, 209);
+        width: 25%;
+        margin-top: 30px;
+        border-radius: 50%;
+        animation: spin 2s 0 ease-in 1, spin 1.5s 2s linear infinite;
+        cursor: pointer;
+    }
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    h2 {
+        padding: 3rem 1rem 1rem 1rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+.active-song {
+    img {
+        width: 25%;
+        margin-top: 30px;
+        border-radius: 50%;
+        box-shadow: 3px 3px 3px rgb(209, 209, 209);
+        animation-name: rotate;
+        animation-duration: 1000s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        cursor: pointer;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(-360deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .songContainer {
+        img {
+            width: 69%;
+            margin-top: 30px;
+            border-radius: 50%;
+        }
+        h2 {
+            padding: 3rem 1rem 1rem 1rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+    }
+}
