@@ -3,6 +3,11 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 .App-Footer {
     color: rgba(0, 0, 0, 0.7);
     text-shadow: 0 1px rgba(255, 255, 255, 0.1);
